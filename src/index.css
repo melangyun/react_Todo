@@ -1,13 +1,102 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap');
+
+*{
+  padding : 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: 'Nanum Myeongjo', serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html{
+  height: 100%;
+  background-color: rgb(230, 220, 216);
+  color : rgb(50,50,50);
+  overflow: auto;
+}
+
+body{
+  height: 100%;
+}
+
+#root{
+  height: 100%;
+  position: relative;
+}
+
+#root > div{
+  padding : 3rem;
+}
+
+.navigation{
+  width : 25%;
+  height: 100%;
+  text-align: center;
+}
+
+.navigation > * {
+  margin-bottom: 1rem;
+}
+
+.rightContents{
+  width : 75%;
+  position : absolute;
+  top: 0;
+  right: 0;
+  clear: both;
+}
+
+.title{
+  margin-bottom: 2rem;
+  border-bottom: 1.5px solid rgb(50,50,50);
+}
+
+.selectBtn{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  margin-right: 10px;
+  background-color: rgb(230,230,230);
+  border: 1.5px solid rgb(10,10,10);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.selectBtn:hover{
+  background-color:tan;
+}
+.contents{
+  cursor: pointer;
+}
+.contents:hover{
+  transition: .5s;
+  text-decoration: line-through;
+}
+
+.todo{
+  border-bottom: 1px solid rgb(150,150,150);
+  padding : 2px;
+}
+.group{
+  cursor: pointer;
+}
+.groupPlus{
+  cursor: pointer;
+}
+
+.groupList{
+  border-top: 1px solid rgb(150,150,150);
+  padding: 1rem;
+}
+
+.searchInput{
+  width: 100%;
+  height: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.addTodo{
+  float: right;
+  cursor: pointer;
 }
