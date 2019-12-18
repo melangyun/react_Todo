@@ -1,12 +1,25 @@
-import React, { Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import Nav from './components/Nav'
 import RightContent from './components/RightContent';
 
-const App = () => (
-  <Fragment>
-    <Nav/>
-    <RightContent />
-  </Fragment>
-);
+class App extends Component {
+
+  state = {
+    'renderingGroup' : 0
+  }
+
+  changeGroup = (num) => {
+    this.setState({'renderingGroup' : num});
+  }
+
+  render(){
+    return(
+      <Fragment>
+        <Nav changeGroup = {this.changeGroup} />
+        <RightContent renderingGroup = {this.state.renderingGroup}/>
+      </Fragment>
+    );
+  }
+}
 
 export default App;

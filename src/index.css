@@ -73,12 +73,15 @@ body{
   text-decoration: line-through;
 }
 
-.todo{
+.todo, .newType_area{
   border-bottom: 1px solid rgb(150,150,150);
   padding : 2px;
 }
 .group{
   cursor: pointer;
+  padding : .5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgb(150,150,150);
 }
 .groupPlus{
   cursor: pointer;
@@ -88,6 +91,7 @@ body{
   border-top: 1px solid rgb(150,150,150);
   padding: 1rem;
 }
+
 
 .searchInput{
   width: 100%;
@@ -99,4 +103,21 @@ body{
 .addTodo{
   float: right;
   cursor: pointer;
+}
+
+.newType_area{
+  display: none;
+}
+
+.newTodo, .newGroup{
+  height: 1.5rem;
+  width: 80%;
+  color: rgb(50,50,50);
+  background-color: rgb(230, 220, 216);
+  border: none;
+  outline: none;
+}
+
+.newGroup{
+  text-align: center;
 }
